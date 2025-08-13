@@ -94,12 +94,6 @@ class Ant:
         self.seq_len = 0                    # current reconstructed sequence length
 
 def dijkstra_shortest_path(adj, used_count, repeat_limits, start, targets, k):
-    """
-    Run Dijkstra from start to each target in 'targets',
-    Allowing nodes v only if used_count[v] < repeat_limits[v].
-    But priorytetyzując węzły z used_count[v]==0 (świeże) przed tymi, które mają used_count>0.
-    Returns (best_target, path_to_best) with minimal sum of weights, or (None, None).
-    """
     num_kmers = len(adj)
     INF = float('inf')
     dist = [INF] * num_kmers
@@ -204,7 +198,7 @@ def two_opt_on_trail(ant, kmers, k, n, adj, max_swaps=20):
             if seq_len_acc < n and idx == ant.trail_len - 1:
                 valid = False
                 break
-            if seq_len_acc > n + (k - 1):  # too long
+            if seq_len_acc > n + (k - 1):
                 valid = False
                 break
         if valid and seq_len_acc >= n and new_length < best_len:
@@ -245,9 +239,9 @@ def update_ants(ants, kmers, k, adj, pher, alpha, beta,
         for i in range(num_kmers):
             ant.used_count[i] = 0
             ant.used_count[start_idx] = 1
+        
         while ant.seq_len < n and ant.trail_len < max_steps:
             u = ant.trail[ant.trail_len - 1]
-
             # TRYB IDEALNY
             if ideal:
                 fresh_candidates = []

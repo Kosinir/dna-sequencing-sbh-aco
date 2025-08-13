@@ -87,12 +87,12 @@ def generate_single_instance(n, k, num_neg_errors, num_pos_errors, has_repeats):
 
 if __name__ == "__main__":
     random.seed(123456789)
-    N_INSTANCES = 50
-    n = 700
-    k = 10
-    num_neg_errors = 70  
+    N_INSTANCES = 1
+    n = 300
+    k = 8
+    num_neg_errors = 0  
     num_pos_errors = 0
-    has_repeats = True
+    has_repeats = False
 
     with open(f"instance-{N_INSTANCES}-{n}.txt", "w") as inst_file, \
          open(f"original-{N_INSTANCES}-{n}.txt", "w") as orig_file:
