@@ -96,6 +96,12 @@ Key observations:
 
 ---
 
+## Full Report
+
+Full project report (Polish):
+
+ [SBH Project Report (PDF)](Sprawozdanie-BioInf-158037.pdf)
+
 ## Author
 
 Szymon Warguła
