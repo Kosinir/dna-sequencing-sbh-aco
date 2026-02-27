@@ -100,7 +100,7 @@ Key observations:
 
 Full project report (Polish):
 
- [SBH Project Report (PDF)](Sprawozdanie-BioInf-158037.pdf)
+ [SBH Project Report (PDF)](SBH_DNA_Reconstruction_Report.pdf)
 
 ## Author
 
